@@ -7,17 +7,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-ftp-deploy');
 
   var path = {
-    css_src: 'src/stylesheets/global.scss',
-    css_dest: 'src/stylesheets/global.css',
-    email_src: 'src/emails/*.hbs',
-    dist: 'dist/',
+    css_src: 'source/stylesheets/global.scss',
+    css_dest: 'source/stylesheets/global.css',
+    email_src: 'source/emails/*.hbs',
+    dist: 'build/',
     dist_test: 'dist_test/',
-    dist_html_glob: 'dist/*.html',
-    dist_text_glob: 'dist/*.txt',
+    dist_html_glob: 'build/*.html',
+    dist_text_glob: 'build/*.txt',
     dist_test_html_glob: 'dist_test/*.html',
-    layouts: 'src/layouts',
-    partials: 'src/partials/*',
-    images_src: 'src/images'
+    layouts: 'source/layouts',
+    partials: 'source/partials/*',
+    images_src: 'source/images'
   };
 
   /* Configuration
@@ -212,7 +212,7 @@ module.exports = function(grunt) {
       options: {
         livereload: true
       },
-      files: ['src/**/*'],
+      files: ['source/**/*'],
       tasks: ['default']
     },
 
